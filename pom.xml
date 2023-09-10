@@ -70,9 +70,6 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.10</version>
-                <configuration>
-                    <destFile>${project.basedir}/../multi-module-core/target/jacoco.exec</destFile>
-                </configuration>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -87,9 +84,7 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <dataFile>${project.basedir}/../multi-module-tests/target/jacoco.exec</dataFile>
                             <includes>
-                                <!-- Include core module classes -->
                                 <!--                                C:\Projects\jococo\test\multi-module\-->
                                 <!--                                <include>${project.basedir}/../multi-module-core/src/main/java/**</include>-->
                                 <include>${project.basedir}/../multi-module-core/target/classes/**</include>

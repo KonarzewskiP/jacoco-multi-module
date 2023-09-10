@@ -34,7 +34,7 @@
                         <configuration>
                             <dataFileIncludes>
 <!--                                <dataFileInclude>**/jacoco.exec</dataFileInclude>-->
-                                <dataFileInclude>**/jacoco.exec</dataFileInclude>
+                                <dataFileInclude>**/target/jacoco.exec</dataFileInclude>
 <!--                                <dataFileInclude>/usl-core-impl/target</dataFileInclude>-->
                             </dataFileIncludes>
                             <outputDirectory>

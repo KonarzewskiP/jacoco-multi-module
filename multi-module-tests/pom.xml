@@ -16,8 +16,6 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
-        <!--        <jacoco.classDumpDir>target/classes</jacoco.classDumpDir>-->
-        <!--        <jacoco.reportPath>${project.basedir}/../jacoco-report/target/jacoco.exec</jacoco.reportPath>-->
     </properties>
 
     <build>

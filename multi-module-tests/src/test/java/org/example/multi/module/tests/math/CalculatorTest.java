@@ -17,14 +17,24 @@ public class CalculatorTest {
 
     @Test
     public void testMultiply() {
-        assertEquals( "Regular multiplication should work", calculator.multiply(4,5), 20);
+        assertEquals("Regular multiplication should work", calculator.multiply(4, 6), 24);
+    }
+
+    @Test
+    public void testAdd() {
+        assertEquals("Regular add should work", calculator.add(4, 6), 10);
     }
 
     @Test
     public void testMultiplyWithZero() {
-        assertEquals("Multiple with zero should be zero",0,  calculator.multiply(0,5));
-        assertEquals("Multiple with zero should be zero", 0, calculator.multiply(5,0));
+        assertEquals("Multiple with zero should be zero", 0, calculator.multiply(0, 5));
+        assertEquals("Multiple with zero should be zero", 0, calculator.multiply(5, 0));
     }
+/*
+    @Test
+    public void test() {
+        throw new NullPointerException();
+    }*/
 
 
 }

@@ -19,32 +19,7 @@
     </properties>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.10</version>
-                <executions>
-                    <execution>
-                        <id>report-aggregate</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>report-aggregate</goal>
-                        </goals>
-                        <configuration>
-                            <dataFileIncludes>
-<!--                                <dataFileInclude>**/jacoco.exec</dataFileInclude>-->
-                                <dataFileInclude>**/target/jacoco.exec</dataFileInclude>
-<!--                                <dataFileInclude>/usl-core-impl/target</dataFileInclude>-->
-                            </dataFileIncludes>
-                            <outputDirectory>
-                                ${project.reporting.outputDirectory}/jacoco-aggregate
-                            </outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+
     </build>
 
     <dependencies>
@@ -61,7 +36,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 
 
 </project>

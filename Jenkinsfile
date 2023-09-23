@@ -21,6 +21,8 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'depolying the application...'
+        sh '''name = "Morgan"
+echo "Good morning $name"'''
       }
     }
 

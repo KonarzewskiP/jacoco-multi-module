@@ -4,10 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'building the application...'
-        timestamps() {
-          sleep 2
-        }
-
+        sh 'sh \'mvn clean install\''
       }
     }
 
@@ -18,9 +15,26 @@ pipeline {
       }
     }
 
+    stage('docker') {
+      environment {
+        DOCKERHUB_USER = 'mrkaczorrro'
+        DOCKERHUB_PASSWORD = 'dckr_pat_p8hOY6zQVJyQKE80QtHBIRezrwA'
+      }
+      steps {
+        echo 'Build Docker image'
+        sh '''docker build -t multi-module-app:latest .
+
+echo \'Login to Dockerhub\'
+docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+
+echo \'Push docker image to docker hub\'
+docker push mrkaczorrro/multi-module-app:latest'''
+      }
+    }
+
     stage('deploy') {
       steps {
-        echo 'depolying the application...'
+        echo 'Deploying the application... '
       }
     }
 

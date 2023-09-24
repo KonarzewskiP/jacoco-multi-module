@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'building the application...'
-        sh 'mvn clean install'
+        sh 'mvn clean install -DskipTests=false'
       }
     }
 
@@ -22,7 +22,7 @@ pipeline {
       }
       steps {
         echo 'Build Docker image'
-        sh '''docker build -t multi-module-app:latest .
+        sh '''docker build -t multi-module-app:latest ./multi-module-core
 
 echo \'Login to Dockerhub\'
 docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD

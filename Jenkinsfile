@@ -27,6 +27,9 @@ pipeline {
 echo \'Login to Dockerhub\'
 docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
 
+echo \'Tag docker image\'
+docker tag multi-module-app:latest mrkaczorrro/multi-module-app:latest
+
 echo \'Push docker image to docker hub\'
 docker push mrkaczorrro/multi-module-app:latest'''
       }

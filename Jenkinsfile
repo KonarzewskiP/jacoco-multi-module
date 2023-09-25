@@ -12,6 +12,7 @@ pipeline {
       steps {
         echo 'testing the application...'
         sh 'ls -la'
+        jacoco(runAlways: true)
       }
     }
 
